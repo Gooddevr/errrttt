@@ -1,0 +1,282 @@
+.entrance__form___active {
+    overflow: hidden;
+}
+.header-container {
+    max-height: 316px;
+}
+.header-body {
+    background-color:firebrick;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    padding-bottom: 8px;
+}
+.heder__logo {
+    order: 2;
+    text-align: center;
+    width: 400px;
+    min-height: 140px;
+    align-self: center;
+    display: flex;
+    flex: 1 1 auto;
+    padding: 20px 0px;
+    justify-content: center;
+}
+.logo_image {
+    position: absolute;
+    display: none;
+}
+.logo_text {
+    font-weight: 700;
+    font-size: 46px;
+    align-self: center;
+    display: inline-block;
+}
+.entrance {
+    display: flex;
+    order: 1;
+    max-width: 300px;
+    max-height: 40px;
+    flex: 0 1 auto;
+    flex-direction: column;
+}
+.btn_entrance-signIn {
+    align-self: flex-end;
+    padding: 10px 15px 15px 15px;
+    &:hover .logIn-img{
+        fill: black;
+        transition: fill 0.3s ease-in, filter 0.3s 0.1s;
+        filter: drop-shadow( 3px 3px 10px white );
+        cursor: pointer;
+    }
+}
+.logIn-img {
+    height: 30px;
+    width: 30px;
+    fill: white;
+}
+.entrance__form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(102, 99, 99, 0.658);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 25;
+    display: none;
+}
+.entrance__form-container {
+    height: 500px;
+    width: 400px;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 2%;
+}
+.entrance__form__login {
+    position: relative;
+}
+.close-form-icon {
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    flex-direction: column;
+    top: 2%;
+    right: 2%;
+    z-index: 1;
+    cursor: pointer;
+    &:hover .close-icon__parttwo, &:hover .close-icon__partone {
+        background-color: rgb(39, 38, 38);
+        box-shadow: 1px 1px 3px white, -1px -1px 3px white ;
+        border: 1px solid rgb(43, 42, 42);
+    }
+    &:hover {
+        box-shadow: 1px 1px 4px white;
+        background-color: rgba(255, 255, 255, 0.377);
+    }
+}
+.close-icon__partone {
+    background-color: white;
+    transform: rotate(47deg);
+    height: 3px;
+    width: 20px;
+    position: absolute;
+}
+.close-icon__parttwo {
+    background-color: white;
+    transform: rotate(-47deg);
+    height: 3px;
+    width: 20px;
+    position: absolute;
+}
+.form-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    visibility: hidden;
+    & label {
+        padding-bottom: 35px;
+        font-weight: 700;
+        font-size: 18px;
+        & input {
+            width: 280px;
+            height: 40px;
+            font-size: 18px;
+        }
+        ::placeholder {
+            font-size: 18px;
+            text-align: center;
+            color: rgb(71, 69, 69);
+            font-weight: 200;
+        }
+    }
+    & button {
+        width: 200px;
+        height: 40px;
+        border-radius: 3%;
+        font-weight: 700;
+        font-size: 18px;
+        margin-top: 25px;
+        &:hover {
+            border: 1px grey solid;
+            transition: all 0.2s ease-in;
+            box-shadow: 2px 2px 6px grey;
+        }
+    }
+    & .btn_switch-form-registration {
+        font-weight: 500;
+        font-size: 18px;
+        margin-top: 12px;
+        margin-bottom: 25px;
+        cursor: pointer;
+        color: white;
+        &:hover {
+        box-shadow: 0px 2px white;
+        transition: all 0.2s ease-in;
+        }
+    }
+    & p {
+        color: blue;
+        font-size: 14px;
+        font-weight: 700;
+        padding-top: 10px;
+    }
+}
+.form-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    .check_terms {
+        position: absolute;
+        margin-left: 5px;
+        height: 13px;
+        width: 13px;
+    }
+    & button {
+        width: 160px;
+        height: 35px;
+        border-radius: 3%;
+        font-weight: 700;
+        font-size: 18px;
+        margin-top: 25px;
+        margin-left: 25px;
+        &:hover {
+            border: 1px grey solid;
+            transition: all 0.2s ease-in;
+            box-shadow: 2px 2px 6px grey;
+        }
+    }
+}
+.label-and-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.label-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding-right: 10px;
+    :not(:first-child) {
+        margin-top: 15px;
+    }
+    & label {
+        padding-bottom: 35px;
+        font-weight: 700;
+        font-size: 12px;
+        padding-bottom: 23px;
+    }
+}
+.input-container {
+    & input {
+        width: 200px;
+        height: 25px;
+        font-size: 16px;
+        margin-bottom: 25px;
+        }
+    ::placeholder {
+        font-size: 18px;
+        text-align: center;
+        color: rgb(71, 69, 69);
+        font-weight: 200;
+        }
+}
+.social {
+    order: 3;
+    max-width: 300px;
+    min-height: 40px;
+    padding-top: 86px;
+    position: relative;
+}
+.social__icon {
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    height: 40px;
+    :not(:last-child) {
+        border-radius: 50%;
+    }
+
+}
+.social__icon_link {
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-size: contain;
+    &:hover {
+        transition: all 0.3s ease-in;
+        box-shadow: 3px 3px 9px black;
+        cursor: pointer;
+    }
+}
+.vkontakte {
+background-image: url("../img/vk.svg");
+}
+.instagram {
+background-image: url("../img/instagram.svg");
+
+}
+.facebook {
+background-image: url("../img/facebook.svg");
+fill: white;
+}
