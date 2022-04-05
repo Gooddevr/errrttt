@@ -1,0 +1,528 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+.entrance__form___active {
+  overflow: hidden;
+}
+
+.header-container {
+  max-height: 316px;
+}
+
+.header-body {
+  background-color: firebrick;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.heder__logo {
+  order: 2;
+  text-align: center;
+  width: 400px;
+  min-height: 140px;
+  align-self: center;
+  display: flex;
+  flex: 1 1 auto;
+  padding: 20px 0px;
+  justify-content: center;
+}
+
+.logo_image {
+  position: absolute;
+  display: none;
+}
+
+.logo_text {
+  font-weight: 700;
+  font-size: 46px;
+  align-self: center;
+  display: inline-block;
+}
+
+.entrance {
+  display: flex;
+  order: 1;
+  max-width: 300px;
+  max-height: 40px;
+  flex: 0 1 auto;
+  flex-direction: column;
+}
+
+.btn_entrance-signIn {
+  align-self: flex-end;
+  padding: 10px 15px 15px 15px;
+}
+.btn_entrance-signIn:hover .logIn-img {
+  fill: black;
+  transition: fill 0.3s ease-in, filter 0.3s 0.1s;
+  filter: drop-shadow(3px 3px 10px white);
+  cursor: pointer;
+}
+
+.logIn-img {
+  height: 30px;
+  width: 30px;
+  fill: white;
+}
+
+.entrance__form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(102, 99, 99, 0.658);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 25;
+  display: none;
+}
+
+.entrance__form-container {
+  height: 500px;
+  width: 400px;
+  background-color: brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 2%;
+}
+
+.entrance__form__login {
+  position: relative;
+}
+
+.close-form-icon {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  flex-direction: column;
+  top: 2%;
+  right: 2%;
+  z-index: 1;
+  cursor: pointer;
+}
+.close-form-icon:hover .close-icon__parttwo, .close-form-icon:hover .close-icon__partone {
+  background-color: #272626;
+  box-shadow: 1px 1px 3px white, -1px -1px 3px white;
+  border: 1px solid #2b2a2a;
+}
+.close-form-icon:hover {
+  box-shadow: 1px 1px 4px white;
+  background-color: rgba(255, 255, 255, 0.377);
+}
+
+.close-icon__partone {
+  background-color: white;
+  transform: rotate(47deg);
+  height: 3px;
+  width: 20px;
+  position: absolute;
+}
+
+.close-icon__parttwo {
+  background-color: white;
+  transform: rotate(-47deg);
+  height: 3px;
+  width: 20px;
+  position: absolute;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  visibility: hidden;
+}
+.form-login label {
+  padding-bottom: 35px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.form-login label input {
+  width: 280px;
+  height: 40px;
+  font-size: 18px;
+}
+.form-login label ::placeholder {
+  font-size: 18px;
+  text-align: center;
+  color: #474545;
+  font-weight: 200;
+}
+.form-login button {
+  width: 200px;
+  height: 40px;
+  border-radius: 3%;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 25px;
+}
+.form-login button:hover {
+  border: 1px grey solid;
+  transition: all 0.2s ease-in;
+  box-shadow: 2px 2px 6px grey;
+}
+.form-login .btn_switch-form-registration {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 12px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  color: white;
+}
+.form-login .btn_switch-form-registration:hover {
+  box-shadow: 0px 2px white;
+  transition: all 0.2s ease-in;
+}
+.form-login p {
+  color: blue;
+  font-size: 14px;
+  font-weight: 700;
+  padding-top: 10px;
+}
+
+.form-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+}
+.form-register .check_terms {
+  position: absolute;
+  margin-left: 5px;
+  height: 13px;
+  width: 13px;
+}
+.form-register button {
+  width: 160px;
+  height: 35px;
+  border-radius: 3%;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+.form-register button:hover {
+  border: 1px grey solid;
+  transition: all 0.2s ease-in;
+  box-shadow: 2px 2px 6px grey;
+}
+
+.label-and-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding-right: 10px;
+}
+.label-container :not(:first-child) {
+  margin-top: 15px;
+}
+.label-container label {
+  padding-bottom: 35px;
+  font-weight: 700;
+  font-size: 12px;
+  padding-bottom: 23px;
+}
+
+.input-container input {
+  width: 200px;
+  height: 25px;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+.input-container ::placeholder {
+  font-size: 18px;
+  text-align: center;
+  color: #474545;
+  font-weight: 200;
+}
+
+.social {
+  order: 3;
+  max-width: 300px;
+  min-height: 40px;
+  padding-top: 86px;
+  position: relative;
+}
+
+.social__icon {
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  height: 40px;
+}
+.social__icon :not(:last-child) {
+  border-radius: 50%;
+}
+
+.social__icon_link {
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-size: contain;
+}
+.social__icon_link:hover {
+  transition: all 0.3s ease-in;
+  box-shadow: 3px 3px 9px black;
+  cursor: pointer;
+}
+
+.vkontakte {
+  background-image: url("../img/vk.svg");
+}
+
+.instagram {
+  background-image: url("../img/instagram.svg");
+}
+
+.facebook {
+  background-image: url("../img/facebook.svg");
+  fill: white;
+}
+
+.main_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 auto;
+}
+
+.main-menu {
+  max-width: 316px;
+  display: flex;
+  align-self: flex-start;
+  justify-content: flex-start;
+  flex: 1 1 auto;
+  padding-top: 25px;
+  padding-right: 15px;
+}
+
+.mein-menu_list-items {
+  align-self: flex-start;
+}
+.mein-menu_list-items a {
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.mein-menu_list__item {
+  margin-top: 15px;
+}
+
+.menu_sublist__items {
+  position: relative;
+}
+
+.menu_sublist__item {
+  display: none;
+}
+
+.main-content {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.main-content__commercial {
+  max-width: 640px;
+  height: 300px;
+}
+
+.main-content__section-recipe {
+  max-width: 640px;
+  height: 500px;
+  position: relative;
+}
+
+.section-recipe__item {
+  display: flex;
+}
+
+.recipe-image-container {
+  margin: 5px;
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.recipe-image-container img {
+  max-width: 200px;
+  height: auto;
+  position: absolute;
+}
+
+.section-recipe__content {
+  position: relative;
+  display: flex;
+  background-color: blue;
+  width: 300px;
+  height: 200px;
+  margin: 5px;
+}
+
+.main-aside {
+  display: flex;
+  flex-direction: column;
+  max-width: 316px;
+  flex: 1 1 auto;
+}
+
+.main-aside__slider {
+  display: none;
+}
+
+/*----------------------------Основные стили------------------------------------------*/
+body {
+  height: 100%;
+}
+
+#wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header {
+  max-height: 316px;
+  background-color: darkorange;
+}
+
+.main {
+  flex: 1 1 auto;
+  background-color: cyan;
+}
+
+.footer {
+  max-height: 300px;
+  background-color: chartreuse;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 10px;
+  background-color: blueviolet;
+  position: relative;
+}
+
+.swiper {
+  width: 300px;
+  height: 300px;
+}
